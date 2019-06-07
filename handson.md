@@ -37,7 +37,7 @@ id: dist
 |①関数名|AmazonConnect-BMI|
 |②実行ロール|AWSポリシーテンプレートから新しいロールを作成|
 |③ロール名|AmazonConnect-Role|
-|④ポリシーテンプレート|シンプルなマイクロサービスのアクセス権限|
+|④ポリシーテンプレート|基本的な Lambda@Edge のアクセス権限|
 
 ![s202](images/s202.png)
 
