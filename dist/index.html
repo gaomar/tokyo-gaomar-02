@@ -91,7 +91,7 @@
 <p>［問い合わせフローの作成］をクリックします。</p>
 <p class="image-container"><img alt="s208" src="img/a2f8135bdb84e534.png"></p>
 <p>名前を「BMIフロー」と入力します。</p>
-<p class="image-container"><img alt="s209" src="img/82a7c93bf551c77c.png"></p>
+<p class="image-container"><img alt="s209" src="img/6f23edb11a581004.png"></p>
 <p>設定カテゴリにある「音声の設定」ブロックをドラッグアンドドロップして、ドロップしたブロックをクリックします。</p>
 <p class="image-container"><img alt="s210" src="img/e2bdb3d3d43529bc.png"></p>
 <p>言語は「日本語」でお好きな音声を選択してください。</p>
@@ -164,8 +164,8 @@
 <p class="image-container"><img alt="s231" src="img/9c17221725d8a1d5.png"></p>
 <p>未接続のノードを全て「切断/ハングアップ」ブロックに繋げます。</p>
 <p class="image-container"><img alt="s232" src="img/f50bad0f802fcba0.png"></p>
-<p>右上の［保存して発行］ボタンをクリックします。</p>
-<p class="image-container"><img alt="s233" src="img/1ceede6e78d89202.png"></p>
+<p>右上の［保存］と [公開] ボタンをクリックします。</p>
+<p class="image-container"><img alt="s233" src="img/19af2e7b12d32466.png"></p>
 <p>左側メニューのルーティングから［電話番号］をクリックします。</p>
 <p class="image-container"><img alt="s234" src="img/491ce1907775b2b9.png"></p>
 <p>電話番号をクリックします。</p>
@@ -320,7 +320,7 @@ exports.handler = async (event) =&gt; {
 <p>［問い合わせフローの作成］ボタンをクリックします。</p>
 <p class="image-container"><img alt="s163" src="img/3f7cbed17590f7e2.png"></p>
 <p>フローの名前を「LINEBotフロー」を入力します。</p>
-<p class="image-container"><img alt="s164" src="img/5fc51ea0c0afcc.png"></p>
+<p class="image-container"><img alt="s164" src="img/ba8c6410514ce343.png"></p>
 <p>音声の設定をドラッグアンドドロップして、ブロックをクリックします。<br>音声の種類を決めて［Save］をクリックして、線を結びます。</p>
 <p class="image-container"><img alt="s165" src="img/366180644adbb43b.png"></p>
 <p>プロンプトの再生をドラッグアンドドロップして、ブロックをクリックします。</p>
@@ -337,7 +337,7 @@ exports.handler = async (event) =&gt; {
 <p>終了/ 転送カテゴリーから切断/ハングアップをドラッグアンドドロップします。</p>
 <p class="image-container"><img alt="s169" src="img/43c9cf59d4e72e17.png"></p>
 <p>線で結びます。<br><img alt="s170" src="img/6f36dd2be0bdfd5a.png"></p>
-<p>［保存して発行］をクリックします。<br><img alt="s171" src="img/bc8a443a4de9afcf.png"></p>
+<p>［保存］と [公開] ボタンをクリックします。<br><img alt="s171" src="img/19af2e7b12d32466.png"></p>
 <h2 is-upgraded>5-2. IDをメモしておく</h2>
 <p>問い合わせフローの名前の下に「追加のフロー情報の表示」という項目があるので、それを展開します。展開するとARNの情報が表示されるのでinstanceのIDとconstact-flowのIDをそれぞれメモしておきます。</p>
 <p class="image-container"><img alt="s172" src="img/37a85f6ce849e5f9.png"></p>
@@ -384,12 +384,10 @@ exports.handler = async (event) =&gt; {
 <p>Lambda画面に戻り、画面更新するとAmazon Connectの権限が追加されます。</p>
 <p class="image-container"><img alt="s141" src="img/3ef6a7679111879a.png"></p>
 <h2 is-upgraded>6-2. API Gatewayを設定する</h2>
-<p>LINE BotがLambdaを実行するためのアクセスURLを発行します。<br>左側メニューから<code>API Gateway</code>をクリックします。</p>
-<p class="image-container"><img alt="s142" src="img/9a800b2f7f3c6842.png"></p>
-<p>下にスクロールすると、トリガーの設定項目があるのでAPIは「新規APIの作成」を選択し、セキュリティは「オープン」にします。<br>設定できたら、右下の［追加］をクリックします。</p>
-<p class="image-container"><img alt="s143" src="img/fe80e24b962bfb1c.png"></p>
-<p>右上の［保存］ボタンをクリックすると、API GatewayのアクセスURLが発行されます。</p>
-<p class="image-container"><img alt="s144" src="img/bfd99442fa4d1d3b.png"></p>
+<p>LINE BotがLambdaを実行するためのアクセスURLを発行します。<br>［トリガーを追加］ボタンをクリックします。</p>
+<p class="image-container"><img alt="s142" src="img/7ed9743aec26166b.png"></p>
+<p>プルダウンメニューからAPI Gatewayを選択します。<br>トリガーの設定項目があるのでAPIは「新規APIの作成」を選択し、セキュリティは「オープン」にします。<br>設定できたら、右下の［追加］をクリックします。</p>
+<p class="image-container"><img alt="s143" src="img/2da921fe61e55135.png"></p>
 <p>アクセスURLは後で使うので、メモしておきます。</p>
 <p class="image-container"><img alt="s145" src="img/1c2eb9b426f1d685.png"></p>
 <h2 is-upgraded>6-3. Lambda関数を編集する</h2>
@@ -483,7 +481,7 @@ exports.handler = async (event, context) =&gt; {
         <h2 is-upgraded>7-1. LINE BotのWebhookを設定する</h2>
 <p>LINE BotとLambdaを連携するためにLINE BotのWebhook URLを指定します。<br>［編集］ボタンをクリックします。</p>
 <p class="image-container"><img alt="s148" src="img/63f829d3c483c3ba.png"></p>
-<p>API Gatewayで発行したアクセスURLを貼り付けます。［更新］ボタンをクリックします。</p>
+<p>API Gatewayで発行したアクセスURLを貼り付けます。［更新］ボタンをクリックします。<br><br>※貼り付ける際、先頭の「<strong>https://</strong>」部分は貼り付けないよう気をつけてください。</p>
 <p class="image-container"><img alt="s149" src="img/968fdc9fc156553.png"></p>
 <p>Webhook送信部分にある編集をクリックします。「利用する」を選択して［更新］ボタンをクリックします。</p>
 <p class="image-container"><img alt="s150" src="img/d1a89a9a023b5896.png"></p>

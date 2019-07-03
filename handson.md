@@ -206,7 +206,7 @@ $.External.BMI
 
 ![s232](images/s232.png)
 
-右上の［保存して発行］ボタンをクリックします。
+右上の［保存］と [公開] ボタンをクリックします。
 
 ![s233](images/s233.png)
 
@@ -446,8 +446,8 @@ Amazon Connectから作成したインスタンスエイリアスをクリック
 線で結びます。
 ![s170](images/s170.png)
 
-［保存して発行］をクリックします。
-![s171](images/s171.png)
+［保存］と [公開] ボタンをクリックします。
+![s171](images/s233.png)
 
 ### 5-2. IDをメモしておく
 問い合わせフローの名前の下に「追加のフロー情報の表示」という項目があるので、それを展開します。展開するとARNの情報が表示されるのでinstanceのIDとconstact-flowのIDをそれぞれメモしておきます。
@@ -514,18 +514,15 @@ Lambda画面に戻り、画面更新するとAmazon Connectの権限が追加さ
 
 ### 6-2. API Gatewayを設定する
 LINE BotがLambdaを実行するためのアクセスURLを発行します。
-左側メニューから`API Gateway`をクリックします。
+［トリガーを追加］ボタンをクリックします。
 
 ![s142](images/s142.png)
 
-下にスクロールすると、トリガーの設定項目があるのでAPIは「新規APIの作成」を選択し、セキュリティは「オープン」にします。
+プルダウンメニューからAPI Gatewayを選択します。
+トリガーの設定項目があるのでAPIは「新規APIの作成」を選択し、セキュリティは「オープン」にします。
 設定できたら、右下の［追加］をクリックします。
 
 ![s143](images/s143.png)
-
-右上の［保存］ボタンをクリックすると、API GatewayのアクセスURLが発行されます。
-
-![s144](images/s144.png)
 
 アクセスURLは後で使うので、メモしておきます。
 
@@ -607,9 +604,9 @@ LINE BotのアクセストークンとAmazon Connectの問い合わせフロー�
 | キー名       |       値 |
 |:-----------------|:------------------|
 |ACCESSTOKEN|3-2で作成したLINE Botのアクセストークン|
-|CONTACTFLOWID|3-2でメモした<span style="color: blue; ">contact-flow</span>のID|
-|INSTANCEID|3-2でメモした<span style="color: red; ">instance</span>のID|
-|SOURCEPHONENUMBER|Amazon Connectで取得した電話番号|
+|CONTACTFLOWID|5-2でメモした<span style="color: blue; ">contact-flow</span>のID|
+|INSTANCEID|5-2でメモした<span style="color: red; ">instance</span>のID|
+|SOURCEPHONENUMBER|Amazon Connectで取得した電話番号 ※+81を先頭につけて数字のみにします|
 
 ![s147](images/s147.png)
 
@@ -620,7 +617,8 @@ LINE BotとLambdaを連携するためにLINE BotのWebhook URLを指定しま�
 
 ![s148](images/s148.png)
 
-API Gatewayで発行したアクセスURLを貼り付けます。［更新］ボタンをクリックします。
+API Gatewayで発行したアクセスURLを貼り付けます。［更新］ボタンをクリックします。  
+※貼り付ける際、先頭の「**https://**」部分は貼り付けないよう気をつけてください。
 
 ![s149](images/s149.png)
 
