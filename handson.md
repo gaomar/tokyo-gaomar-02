@@ -18,6 +18,8 @@ id: dist
 すでにAmazon Connectの電話番号を取得している前提で開始します。
 まだ未取得な方はこちらから番号を取得しておいてください。
 
+ここで手に入れた電話番号は後ほど使うのでメモしておきましょう。
+
 [https://ac-handson-00.netlify.com](https://ac-handson-00.netlify.com)
 
 
